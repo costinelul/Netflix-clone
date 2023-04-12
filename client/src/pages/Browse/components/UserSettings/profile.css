@@ -1,0 +1,41 @@
+.profile_picture {
+    position: absolute;
+    background-size: cover;
+    border-radius: 5px;
+    right: 50px;
+    height: 35px;
+    width: 35px;
+}
+
+.user_settings {
+    user-select: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.808);
+    border-radius: 10px;
+    color: white;
+    right: 33px;
+    top: 50px;
+    width: 150px;
+    padding: 10px;
+    height: 200px;
+}
+
+.arrow {
+    background-image: url(./arrow.png);
+    position: absolute;
+    transform: rotate(90deg);
+    right: 33px;
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    transition: transform 0.2s;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.choose_picture {
+    position: absolute;
+    background-color: black;
+}

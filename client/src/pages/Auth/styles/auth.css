@@ -1,0 +1,53 @@
+.background {
+    height: 100vh;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    z-index: -100;
+}
+
+.auth_options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.auth_img {
+    width: 10vw;
+    margin-left: 5vw;
+    margin-top: 1vw;
+}
+.shade {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+.auth_text {
+    color: antiquewhite;
+    text-align: center;
+}
+
+.auth_buttons {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.auth_button {
+    cursor: pointer;
+    font-size: 23px;
+    background-color: rgb(228, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5vw;
+}
+
+.auth_button:hover {
+    background-color: rgb(190, 2, 2);
+}

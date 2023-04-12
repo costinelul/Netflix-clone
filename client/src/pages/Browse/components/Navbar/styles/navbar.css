@@ -1,0 +1,50 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 4vw;
+    min-height: 40px;
+    background-image: linear-gradient(#111, hsla(0, 0%, 0%, 0));
+}
+
+.navbar__black {
+    background-color: #111;
+    transition: all 0.7s;
+}
+
+.logo {
+    padding: 10px;
+    margin-left: 3.6vw;
+    width: 6.5vw;
+    min-width: 40px;
+    height: 1.8vw;
+}
+
+.nabar__options {
+    display: flex;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    gap: 1.7vw;
+    margin-left: 4vw;
+    align-items: center;
+}
+
+.option {
+    color: white;
+    cursor: pointer;
+    font-size: 1vw;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    font-size: 1.1vw;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.highlight {
+    font-weight: bold;
+}
+

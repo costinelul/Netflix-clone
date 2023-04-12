@@ -1,0 +1,73 @@
+.banner {
+    height: 45vw;
+    background-size: cover;
+}
+
+.info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    top: 15vw;
+    left: 5vw;
+    color: rgb(219, 219, 219);
+}
+
+.movie_title {
+    font-size: 3.5vw;
+    margin-bottom: 0vw;
+}
+
+/* .bottom__fade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgb(13, 13, 13), rgb(0, 0, 0, 0));
+} */
+
+.overview {
+    width: 30vw;
+    font-size: 1.1vw;
+    background-color: rgba(0, 0, 0, 0.199);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+
+.buttons > * {
+    border-radius: 10px;
+    height: 2.5vw;
+    width: 7vw;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.801);
+    font-size: 1vw;
+}
+
+.shadow {
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to right, #111111ce, rgba(0, 0, 0, 0));
+}
+
+.play__btn {
+    background-image: url(../img/play.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position-x: 1.3vw;
+    background-position-y: 0.2vw;
+}
+
+.info__btn {
+    background-image: url(../img/info.png);
+    background-size: 25%;
+    background-position-x: 0.7vw;
+    background-position-y: 0.2vw;
+    background-repeat: no-repeat;
+    width: 8vw;
+}

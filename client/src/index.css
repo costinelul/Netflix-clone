@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(13, 13, 13);
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
