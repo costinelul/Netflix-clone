@@ -19,7 +19,7 @@ mongoose
 
 app.post("/register", async (req, res) => {
     const { email, password } = req.body;
-    salt = bcrypt.genSalt();
+    const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(password, salt);
     try {
         await User.create({

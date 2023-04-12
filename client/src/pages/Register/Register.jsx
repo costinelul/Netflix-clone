@@ -16,7 +16,6 @@ export default function Register() {
         e.preventDefault();
         if (passwordMatch) {
             const response = await fetch("http://localhost:5000/register", {
-                mode: "no-cors",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -27,11 +26,10 @@ export default function Register() {
                 }),
             });
             const data = await response.json();
-            console.log(data.status);
             setStatus(data.status);
             setTimeout(() => {
                 if (data.status === "Success") navigate("/login");
-            }, 2000);
+            }, 1000);
         }
     }
 
