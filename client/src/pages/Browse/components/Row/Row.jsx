@@ -50,7 +50,7 @@ function SliderMovies({ movies, sliderPosition }) {
             {movies.map((movie, index) => {
                 return (
                     <div key={movie.movieData.title} className={`movie__container`} style={{ left: `${index * 15.5}vw` }}>
-                        <img className="movie" src={`https://image.tmdb.org/t/p/original/${movie.movieData.backdrop_path}`} alt="" />
+                        <img className="movie" src={movie.movieData.backdrop_path ? `https://image.tmdb.org/t/p/original/${movie.movieData.backdrop_path}`: ""} alt="" />
                     </div>
                 );
             })}
