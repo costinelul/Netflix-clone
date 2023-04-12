@@ -30,6 +30,7 @@ app.post("/register", async (req, res) => {
         UserSettings.create({
             _id: email,
             profilePicture: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
+            userName: email.split("@")[0],
         });
         res.send({ status: "Success" });
     } catch (err) {

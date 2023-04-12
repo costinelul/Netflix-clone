@@ -3,8 +3,8 @@
     background-size: cover;
     border-radius: 5px;
     right: 50px;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
 }
 
 .user_settings {
@@ -38,4 +38,11 @@
 .choose_picture {
     position: absolute;
     background-color: black;
+}
+
+.greeting {
+    color: whitesmoke;
+    font-size: 1vw;
+    position: absolute;
+    right: 90px;
 }

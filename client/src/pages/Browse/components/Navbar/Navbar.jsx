@@ -17,12 +17,7 @@ export default function Navbar({ userId }) {
         <div className={`navbar ${showBlack && "navbar__black"}`}>
             <img className="logo" src={require("./img/logo.png")} alt="NETFLIX LOGO" />
             <div className="nabar__options">
-                <span className="option">Home</span>
-                <span className="option">Series</span>
-                <span className="option">Films</span>
-                <span className="option">New & Popular</span>
                 <span className="option">My List</span>
-                <span className="option">Browse by Languages</span>
             </div>
             <UserSettings userId={userId} />
         </div>

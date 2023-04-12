@@ -6,6 +6,7 @@ function UserSettings({ userId }) {
     const [profilePicture, setProfilePicture] = useState("");
     const [showDropDown, setShowDropDown] = useState(false);
     const [mouseOverArrow, setMouseOverArrow] = useState(false);
+    const [userName, setUserName] = useState("");
     let mouseOverSettings = false;
     const navigate = useNavigate();
 
@@ -13,17 +14,19 @@ function UserSettings({ userId }) {
         async function fetchProfilePicture() {
             const userSettings = await fetch(`http://localhost:5000/settings/user${userId}`).then((res) => res.json());
             setProfilePicture(userSettings.settings.profilePicture);
+            setUserName(userSettings.settings.userName);
         }
         fetchProfilePicture();
     }, [userId]);
 
-    function signOut(){
+    function signOut() {
         document.cookie = "user-id=";
         navigate("/");
     }
     return (
         <>
             <div className="choose_picture"></div>
+            <span className="greeting">Hello, {userName}</span>
             <img className="profile_picture pointer" src={profilePicture} alt="profile"></img>
             <div
                 className="arrow pointer"
@@ -53,7 +56,9 @@ function UserSettings({ userId }) {
                     <span className="pointer">Change avatar</span>
                     <br></br>
                     <br></br>
-                    <span className="pointer" onClick={signOut}>Sign Out</span>
+                    <span className="pointer" onClick={signOut}>
+                        Sign Out
+                    </span>
                 </div>
             ) : null}
         </>
