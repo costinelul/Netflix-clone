@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./profile.css";
 
 function UserSettings({ userId }) {
@@ -6,6 +7,7 @@ function UserSettings({ userId }) {
     const [showDropDown, setShowDropDown] = useState(false);
     const [mouseOverArrow, setMouseOverArrow] = useState(false);
     let mouseOverSettings = false;
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchProfilePicture() {
@@ -15,6 +17,10 @@ function UserSettings({ userId }) {
         fetchProfilePicture();
     }, [userId]);
 
+    function signOut(){
+        document.cookie = "user-id=";
+        navigate("/");
+    }
     return (
         <>
             <div className="choose_picture"></div>
@@ -45,6 +51,9 @@ function UserSettings({ userId }) {
                     onMouseEnter={() => (mouseOverSettings = true)}
                 >
                     <span className="pointer">Change avatar</span>
+                    <br></br>
+                    <br></br>
+                    <span className="pointer" onClick={signOut}>Sign Out</span>
                 </div>
             ) : null}
         </>
