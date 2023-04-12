@@ -46,3 +46,24 @@
     position: absolute;
     right: 90px;
 }
+
+.change_username {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.863);
+    border-radius: 30px;
+    padding: 20px;
+    color: whitesmoke;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.change_username_buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+

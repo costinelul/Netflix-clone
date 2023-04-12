@@ -40,7 +40,6 @@ app.post("/register", async (req, res) => {
 
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
-
     const user = await User.findOne({
         email,
     });
@@ -48,6 +47,18 @@ app.post("/login", async (req, res) => {
 
     if (user && checkPassword) res.send({ user: true, email });
     else res.send({ user: false, message: "User not found" });
+});
+
+app.post("/change-settings/username", async (req, res) => {
+    const { id, username } = req.body;
+    const response = await UserSettings.updateOne({ _id: id }, { userName: username });
+    res.send({ res: response.acknowledged });
+});
+
+app.post("/change-settings/profile-picture", async (req, res) => {
+    const { id, profilePicture } = req.body;
+    const response = await UserSettings.updateOne({ _id: id }, { profilePicture: profilePicture });
+    res.send({ res: response.acknowledged });
 });
 
 app.get("/settings/user:id", async (req, res) => {
