@@ -8,7 +8,6 @@ import Avatar from "./pages/Avatar/Avatar";
 import "./index.css";
 
 function App() {
-    const userId = document.cookie.split("=")[1];
     return (
         <div className="App">
             <BrowserRouter>
@@ -16,7 +15,7 @@ function App() {
                     <Route path="/" exact element={<Auth />} />
                     <Route path="/register" exact element={<Register />} />
                     <Route path="/login" exact element={<Login />} />
-                    <Route path="/browse" exact element={userId ? <Browse userId={userId} /> : <Navigate to="/login" />} />
+                    <Route path="/browse" exact element={document.cookie.split("=")[1] ? <Browse userId={document.cookie.split("=")[1]} /> : <Navigate to="/login" />} />
                     <Route path="/profile/change-avatar" exact element={<Avatar />} />
                 </Routes>
             </BrowserRouter>
