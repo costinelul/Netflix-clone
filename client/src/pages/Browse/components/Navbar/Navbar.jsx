@@ -16,9 +16,9 @@ export default function Navbar({ userId }) {
     return (
         <div className={`navbar ${showBlack && "navbar__black"}`}>
             <img className="logo" src={require("./img/logo.png")} alt="NETFLIX LOGO" />
-            <div className="nabar__options">
+            {/* <div className="nabar__options">
                 <span className="option">My List</span>
-            </div>
+            </div> */}
             <UserSettings userId={userId} />
         </div>
     );
