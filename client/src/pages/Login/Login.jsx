@@ -25,7 +25,8 @@ export default function Login() {
 
         if (response.user) {
             document.cookie = `user-id=${response.email}`;
-            navigate("/browse");
+            console.log("a")
+            navigate("/browse")
         } else {
             setShowMessage(response.message);
         }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Browse from "./pages/Browse/Browse";
 import Auth from "./pages/Auth/Auth";
 import Register from "./pages/Register/Register";
@@ -15,12 +15,11 @@ function App() {
                     <Route path="/" exact element={<Auth />} />
                     <Route path="/register" exact element={<Register />} />
                     <Route path="/login" exact element={<Login />} />
-                    <Route path="/browse" exact element={document.cookie.split("=")[1] ? <Browse userId={document.cookie.split("=")[1]} /> : <Navigate to="/login" />} />
+                    <Route path="/browse" exact element={<Browse />} />
                     <Route path="/profile/change-avatar" exact element={<Avatar />} />
                 </Routes>
             </BrowserRouter>
         </div>
     );
 }
-
 export default App;
